@@ -10,13 +10,6 @@ input[type='radio'] {
     opacity: 0;
 }
 
-.roll,
-.inventory {
-    display: none;
-    padding: 20px;
-    border-top: 2px solid #999999;
-}
-
 .container {
     background-color: #000000;
     height: 100vh;
@@ -61,4 +54,6 @@ input[type='radio'] {
     border: 4px solid #15ff00;
     color: #15ff00;
     width: 80%;
+    display: none;
+    padding: 20px;
 }
