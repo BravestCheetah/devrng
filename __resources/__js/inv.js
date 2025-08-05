@@ -24,9 +24,18 @@ const inv = {
             python: {
                 rarity: "rare",
                 name: "Python",
-                image: "python.png"
+                image: "arch-linux.png"
             }
         }
     }
 
+}
+
+
+
+function addItem(item) {
+    const container = inv.sections.os;
+    item_container = document.createElement("div");
+
+    
 }
