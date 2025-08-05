@@ -103,3 +103,11 @@ function get_category_completion(category) {
     return `${percentage}% ( ${owned_item_count} / ${total_item_count} )`
 }
 
+
+function update_category_completion() {
+    categories = Object.keys(inv_data.items);
+
+    categories.forEach(category => {
+        category_container = inv_data.sections[category];
+    });
+}
