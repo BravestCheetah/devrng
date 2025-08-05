@@ -7,6 +7,7 @@ async function roll_collection(collection_name) {
     const roll_overlay = document.getElementById("roll-overlay");
     const overlay_collection_name = roll_overlay.querySelector("#roll-name");
     const overlay_result = roll_overlay.querySelector("#roll-result");
+    const overlay_rarity = roll_overlay.querySelector("#roll-rarity");
     const overlay_progress = roll_overlay.querySelector("#roll-progress");
 
     overlay_result.style.fontSize = "16px";
@@ -37,6 +38,8 @@ async function roll_collection(collection_name) {
 
         console.log(result);
         overlay_result.textContent = inv_data.items[result.split(".")[0]][result.split(".")[1]].name;
+        overlay_rarity.textContent = inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity.toUpperCase();
+        overlay_rarity.style.color = inv_data.rarities[inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity];
         overlay_progress.value = i;
 
         const delay = Math.min(base_delay * 1.6 ** i, max_delay);
@@ -44,10 +47,14 @@ async function roll_collection(collection_name) {
     }
 
     console.log(`Final Result: ${result}`);
-    addItem(result.split(".")[0], result.split(".")[1]);
+    if (check_if_owned(result.split(".")[0], result.split(".")[1])) { addItem(result.split(".")[0], result.split(".")[1]); }
+
     overlay_progress.style.display = "none";
     overlay_result.style.fontSize = "32px";
+    overlay_result.style.fontSize = "26px";
     overlay_collection_name.textContent = "Added To Invetory!";
+
     await sleep(1000);
+
     roll_overlay.style.display = "none";
 }
