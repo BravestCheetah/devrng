@@ -2,6 +2,36 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
+function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+}
+
+
+async function animate_progress(progressEl, duration, max) {
+    const start = performance.now();
+    
+    return new Promise(resolve => {
+        function update(now) {
+            const elapsed = now - start;
+            const t = Math.min(elapsed / duration, 1);
+            const eased = easeOutCubic(t);
+
+            progressEl.value = eased * max;
+
+            if (t < 1) {
+                requestAnimationFrame(update);
+            } else {
+                resolve();
+            }
+        }
+        requestAnimationFrame(update);
+    });
+}
+
+
+
+
 async function roll_collection(collection_name) {
 
     const roll_overlay = document.getElementById("roll-overlay");
@@ -30,8 +60,11 @@ async function roll_collection(collection_name) {
     const max_delay = 1000;
     var magic_num;
     var chance_score;
-
     var result;
+
+    const delays = Array.from({ length: 26 }, (_, i) => Math.min(base_delay * 1.18 ** i, max_delay));
+    const total_roll_time = delays.reduce((a, b) => a + b, 0);
+    animate_progress(overlay_progress, total_roll_time, 25);
 
     for (let i = 0; i < 26; i++) {
         magic_num = Math.random();
@@ -51,7 +84,7 @@ async function roll_collection(collection_name) {
         overlay_rarity.style.color = inv_data.rarities[inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity];
         overlay_progress.value = i;
 
-        const delay = Math.min(base_delay * 1.2 ** i, max_delay);
+        const delay = Math.min(base_delay * 1.18 ** i, max_delay);
         await sleep(delay);
     }
 
