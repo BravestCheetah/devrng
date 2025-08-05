@@ -37,7 +37,7 @@ function check_if_owned(category, item) {
 function get_owned() {
 
     let owned_items = [];
-    
+
     Object.keys(inv_data.items).forEach(category => {
 
         const container = inv_data.sections[category];
@@ -57,4 +57,21 @@ function get_owned() {
         };
     });
     return owned_items
+}
+
+
+function load_stored_data() {
+    const data = localStorage.getItem("inventory_data");
+    return data ? JSON.parse(data) : [];
+}
+
+
+function add_item_to_save(category, item) {
+    const data = load_stored_data();
+    const item_id = `${category}.${item}`;
+
+    if (!data.includes(item_id)) {
+        data.push(item_id);
+        localStorage.setItem("inventory_data", JSON.stringify(data));
+    }
 }
