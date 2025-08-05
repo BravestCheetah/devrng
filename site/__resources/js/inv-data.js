@@ -72,6 +72,30 @@ const inv_data = {
                 name: "Rust",
                 image: "rust.png"
             },
+
+            lol: {
+                rarity: "legendary",
+                name: "LOLCODE",
+                image: "lolcode.png"
+            },
+
+            java: {
+                rarity: "rare",
+                name: "Java",
+                image: "java.png"
+            },
+
+            go: {
+                rarity: "uncommon",
+                name: "Golang",
+                image: "go.png"
+            },
+
+            asm: {
+                rarity: "divine",
+                name: "Assembly",
+                image: "asm.png"
+            },
         }
     }
 
