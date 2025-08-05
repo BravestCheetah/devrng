@@ -91,8 +91,8 @@ input[type='radio'] {
 }
 
 .roll-content {
-    width: 250px;
-    height: 250px;
+    width: 181px;
+    height: 181px;
 }
 
 .inv-item img,
@@ -102,7 +102,7 @@ input[type='radio'] {
 }
 
 .roll-content img {
-    height: 215px;
+    height: 150px;
 }
 
 .inv-item p {
@@ -117,10 +117,11 @@ input[type='radio'] {
     width: 100%;
     cursor: pointer;
     font-size: auto;
-    height: 33px;
+    height: 30px;
 }
 
 .roll-overlay {
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -132,7 +133,12 @@ input[type='radio'] {
     color: #15ff00;
     text-align: center;
     display: none;
+    transition: opacity .5s ease-out;
+}
 
+.roll-overlay.visible {
+    display: block;
+    opacity: 1;
 }
 
 .roll-overlay h2 {

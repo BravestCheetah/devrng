@@ -11,7 +11,16 @@ async function roll_collection(collection_name) {
     const overlay_progress = roll_overlay.querySelector("#roll-progress");
 
     overlay_result.style.fontSize = "16px";
+
     roll_overlay.style.display = "block";
+    roll_overlay.classList.remove("visible");
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            roll_overlay.classList.add("visible");
+        });
+    });
+
     overlay_progress.style.display = "inline-block";
 
     console.log(`Rolling Collection "${collection_name}"...`);
@@ -61,5 +70,8 @@ async function roll_collection(collection_name) {
 
     await sleep(1000);
 
+    roll_overlay.classList.remove("visible");
+    await sleep(500);
     roll_overlay.style.display = "none";
+
 }
