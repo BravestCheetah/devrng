@@ -17,6 +17,8 @@ function addItem(category, item) {
     item_text.textContent = inv_data.items[category][item].name;
     item_text.style.color = inv_data.rarities[inv_data.items[category][item].rarity]
     item_container.appendChild(item_text);
+
+    sort_inv();
 }
 
 
@@ -43,25 +45,32 @@ function add_item_to_save(category, item) {
 }
 
 
+function get_item(category, name) {
+    return Object.keys(inv_data.items[category]).find(id => inv_data.items[category][id].name === name);
+}
+
+
 function sort_inv() {
-    const order_by_rarity = Object.keys(inv_data.rarities);
+    save_data = load_stored_data()
 
-    Object.entries(inv_data.sections).forEach(([category, container]) => {
-        const item_containers = Array.from(container.children);
+    save_data.forEach(item_id => {
 
-        item_containers.sort((a, b) => {
-            const aName = a.querySelector("p").textContent;
-            const bName = b.querySelector("p").textContent;
+        const [category, item] = item_id.split(".");
+        const container = inv_data.sections[category];
+        if (!container) return;
 
-            const aId = getItemIdFromName(category, aName);
-            const bId = getItemIdFromName(category, bName);
+        const divs = container.querySelectorAll("div.inv-item");
 
-            const aRarity = inv_data.items[category][aId].rarity;
-            const bRarity = inv_data.items[category][bId].rarity;
+        for (const div of divs) {
 
-            return order_by_rarity.indexOf(aRarity) - order_by_rarity.indexOf(bRarity);
-        });
+            const item_name = div.querySelector("p").textContent;
+            const div_item = get_item(category, item_name);
 
-        item_containers.forEach(div => container.appendChild(div)); // Reattach in new order
+            if (div_item === item) {
+                container.appendChild(div);
+                break;
+            }
+        }
     });
 }
+
