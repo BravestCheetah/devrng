@@ -60,6 +60,18 @@ const inv_data = {
                 name: "Holy C",
                 image: "holyc.png"
             },
+
+            php: {
+                rarity: "uncommon",
+                name: "PHP",
+                image: "php.png"
+            },
+
+            rust: {
+                rarity: "rare",
+                name: "Rust",
+                image: "rust.png"
+            },
         }
     }
 

@@ -24,7 +24,7 @@ async function roll_collection(collection_name) {
 
     var result;
 
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < 26; i++) {
         magic_num = Math.random();
         chance_score = 0;
         
@@ -42,7 +42,7 @@ async function roll_collection(collection_name) {
         overlay_rarity.style.color = inv_data.rarities[inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity];
         overlay_progress.value = i;
 
-        const delay = Math.min(base_delay * 1.6 ** i, max_delay);
+        const delay = Math.min(base_delay * 1.2 ** i, max_delay);
         await sleep(delay);
     }
 

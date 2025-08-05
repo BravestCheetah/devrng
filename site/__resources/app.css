@@ -90,10 +90,19 @@ input[type='radio'] {
     text-align: inherit;
 }
 
+.roll-content {
+    width: 250px;
+    height: 250px;
+}
+
 .inv-item img,
 .roll-content img {
     height: 55px;
     margin: 0;
+}
+
+.roll-content img {
+    height: 215px;
 }
 
 .inv-item p {
@@ -107,6 +116,7 @@ input[type='radio'] {
     margin-top: -1px;
     width: 100%;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .roll-overlay {
