@@ -3,6 +3,7 @@ function addItem(category, item) {
 
     item_container = document.createElement("div");
     item_container.className = "inv-item";
+    item_container.style.borderColor = inv_data.rarities[inv_data.items[category][item].rarity]
     container.appendChild(item_container);
 
     item_img = document.createElement("img");
@@ -11,6 +12,7 @@ function addItem(category, item) {
 
     item_text = document.createElement("p");
     item_text.textContent = inv_data.items[category][item].name;
+    item_text.style.color = inv_data.rarities[inv_data.items[category][item].rarity]
     item_container.appendChild(item_text);
 }
 
