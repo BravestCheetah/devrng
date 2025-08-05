@@ -1,7 +1,3 @@
-// I am so sorry for this horrible code, its my first web dev project :sob:
-// oh yeah i like whitespace in variables / objects, so you know, thats why there are so many linebreaks
-
-
 function addItem(category, item) {
     const container = inv.sections[category];
 
