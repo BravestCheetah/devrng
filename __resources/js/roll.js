@@ -47,7 +47,13 @@ async function roll_collection(collection_name) {
     }
 
     console.log(`Final Result: ${result}`);
-    if (check_if_owned(result.split(".")[0], result.split(".")[1])) { addItem(result.split(".")[0], result.split(".")[1]); }
+    if (!check_if_owned(result.split(".")[0], result.split(".")[1])) {
+        addItem(result.split(".")[0], result.split(".")[1]);
+        overlay_collection_name.textContent = "Added To Invetory!";
+    }
+    else {
+        overlay_collection_name.textContent = "Already Owned";
+    }
 
     overlay_progress.style.display = "none";
     overlay_result.style.fontSize = "32px";
