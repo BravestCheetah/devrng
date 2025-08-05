@@ -16,5 +16,6 @@ for (const [key, val] of Object.entries(collections)) {
 
     const collection_button = document.createElement("button");
     collection_button.textContent = key;
+    collection_button.onclick = () => roll_collection(key);
     collection_container.appendChild(collection_button)
 }
