@@ -17,7 +17,6 @@ function addItem(category, item) {
 }
 
 
-
 function check_if_owned(category, item) {
     const owned = loadOwnedItems();
     return owned.includes(`${category}.${item}`);
