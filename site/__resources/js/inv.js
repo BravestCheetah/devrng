@@ -51,9 +51,22 @@ function get_item(category, name) {
 
 
 function sort_inv() {
-    save_data = load_stored_data()
+    const save_data = load_stored_data()
 
-    save_data.forEach(item_id => {
+    const data = save_data.sort(function(a, b) {
+
+        const rarities = {};
+        Object.keys(inv_data.rarities).forEach((value, index) => {
+            rarities[value] = index;
+        });
+
+        const a_item_value = rarities[inv_data.items[a.split(".")[0]][a.split(".")[1]].rarity]
+        const b_item_value = rarities[inv_data.items[b.split(".")[0]][b.split(".")[1]].rarity]
+
+        return b_item_value - a_item_value
+    });
+
+    data.forEach(item_id => {
 
         const [category, item] = item_id.split(".");
         const container = inv_data.sections[category];
