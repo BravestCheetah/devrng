@@ -116,7 +116,8 @@ input[type='radio'] {
     margin-top: -1px;
     width: 100%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: auto;
+    height: 33px;
 }
 
 .roll-overlay {

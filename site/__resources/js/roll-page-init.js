@@ -20,7 +20,7 @@ for (const [key, val] of Object.entries(collections)) {
 
     console.log(`    - loading collection button...`)
     const collection_button = document.createElement("button");
-    collection_button.textContent = key;
+    collection_button.textContent = roll_data.collections[key].name;
     collection_button.onclick = () => roll_collection(key);
     collection_container.appendChild(collection_button)
 }
