@@ -107,3 +107,40 @@ input[type='radio'] {
     width: 100%;
     cursor: pointer;
 }
+
+.roll-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    pointer-events: all;
+    color: #15ff00;
+    text-align: center;
+    display: none;
+
+}
+
+.roll-overlay h2 {
+    margin-top: 20%;
+}
+
+.roll-overlay progress {
+    color: #15ff00;
+    background-color: #000000;
+    border-radius: 10em;
+    border-color: #15ff00;
+    border-width: 2px;
+    
+}
+
+.roll-overlay progress[value]::-webkit-progress-value {
+    border-radius: 10em;
+    background: #15ff00;
+}
+.roll-overlay progress[value]::-moz-progress-bar {
+    border-radius: 10em;
+    background: #15ff00;
+}
