@@ -58,7 +58,6 @@ async function roll_collection(collection_name) {
     overlay_progress.style.display = "none";
     overlay_result.style.fontSize = "32px";
     overlay_result.style.fontSize = "26px";
-    overlay_collection_name.textContent = "Added To Invetory!";
 
     await sleep(1000);
 
