@@ -1,4 +1,6 @@
 function addItem(category, item) {
+    add_item_to_save(category, item);
+
     const container = inv_data.sections[category];
 
     item_container = document.createElement("div");
@@ -18,8 +20,8 @@ function addItem(category, item) {
 
 
 function check_if_owned(category, item) {
-    const owned = loadOwnedItems();
-    return owned.includes(`${category}.${item}`);
+    const data = load_stored_data();
+    return data.includes(`${category}.${item}`);
 }
 
 
