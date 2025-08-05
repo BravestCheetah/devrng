@@ -5,6 +5,13 @@ const inv_data = {
         "lang": document.querySelector("#inv-lang .inv-item-section"),
     },
 
+    rarities: {
+        "uncommon": "#23f01f",
+        "rare": "#0a84f0",
+        "legendary": "#e0f00a",
+        "divine": "#f00a30"
+    },
+
 
 
     items: {
@@ -37,7 +44,7 @@ const inv_data = {
             },
 
             cpp: {
-                rarity: "rare",
+                rarity: "uncommon",
                 name: "C++",
                 image: "cpp.png"
             },
@@ -51,7 +58,7 @@ const inv_data = {
             holyc: {
                 rarity: "legendary",
                 name: "Holy C",
-                image: "clang.png"
+                image: "holyc.png"
             },
         }
     }
