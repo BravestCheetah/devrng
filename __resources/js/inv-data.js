@@ -22,7 +22,37 @@ const inv_data = {
                 rarity: "rare",
                 name: "Python",
                 image: "python.png"
-            }
+            },
+
+            javascript: {
+                rarity: "uncommon",
+                name: "javaScript",
+                image: "javascript.png"
+            },
+
+            clang: {
+                rarity: "rare",
+                name: "C",
+                image: "clang.png"
+            },
+
+            cpp: {
+                rarity: "rare",
+                name: "C++",
+                image: "cpp.png"
+            },
+
+            cs: {
+                rarity: "uncommon",
+                name: "C#",
+                image: "cs.png"
+            },
+
+            holyc: {
+                rarity: "legendary",
+                name: "Holy C",
+                image: "clang.png"
+            },
         }
     }
 
