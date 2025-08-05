@@ -33,9 +33,16 @@ const inv = {
 
 
 
-function addItem(item) {
-    const container = inv.sections.os;
-    item_container = document.createElement("div");
+function addItem(category, item) {
+    const container = inv.sections[category];
 
-    
+    item_container = document.createElement("div");
+    item_container.class = "inv-item";
+    container.appendChild(item_container);
+
+    item_img = document.createElement("img");
+    item_img.src = `../__resources/images/rolls/${category}/${inv.items[category][item].image}`;
+    item_container.appendChild(item_img);
+
+    item_text = 
 }
