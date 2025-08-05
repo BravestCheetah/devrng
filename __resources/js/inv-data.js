@@ -1,4 +1,4 @@
-const inv = {
+const inv_data = {
 
     sections: {
         "os": document.querySelector("#inv-os .inv-item-section"),
