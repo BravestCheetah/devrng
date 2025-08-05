@@ -100,5 +100,6 @@ function get_category_completion(category) {
 
     percentage = Math.floor((100 / total_item_count) * owned_item_count)
 
-    return `${percentage} ( ${owned_item_count} / ${total_item_count} )`
+    return `${percentage}% ( ${owned_item_count} / ${total_item_count} )`
 }
+
