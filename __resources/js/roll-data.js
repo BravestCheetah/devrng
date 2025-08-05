@@ -1,6 +1,7 @@
 const roll_data = {
 
     collections: {
+        container: document.getElementById("roll-collections"),
 
         test: {
             name: "Test Collection",
