@@ -89,16 +89,16 @@ function sort_inv() {
 
 
 function get_category_completion(category) {
-    const data = load_stored_data()
-    var owned_item_count = 0
+    const data = load_stored_data();
+    var owned_item_count = 0;
 
     data.forEach(item_id => {
         if (item_id.split(".")[0] == category) { owned_item_count++; }
     });
 
-    total_item_count = Object.keys(inv_data.items[category]).length
+    total_item_count = Object.keys(inv_data.items[category]).length;
 
-    percentage = Math.floor((100 / total_item_count) * owned_item_count)
+    percentage = Math.floor((100 / total_item_count) * owned_item_count);
 
     return `${percentage}% ( ${owned_item_count} / ${total_item_count} )`
 }
