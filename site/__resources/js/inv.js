@@ -1,3 +1,4 @@
+// idk why my function naming changed for only this one, but im too lazy to change it
 function addItem(category, item) {
     add_item_to_save(category, item);
 
@@ -39,4 +40,28 @@ function add_item_to_save(category, item) {
         data.push(item_id);
         localStorage.setItem("inventory_data", JSON.stringify(data));
     }
+}
+
+
+function sort_inv() {
+    const order_by_rarity = Object.keys(inv_data.rarities);
+
+    Object.entries(inv_data.sections).forEach(([category, container]) => {
+        const item_containers = Array.from(container.children);
+
+        item_containers.sort((a, b) => {
+            const aName = a.querySelector("p").textContent;
+            const bName = b.querySelector("p").textContent;
+
+            const aId = getItemIdFromName(category, aName);
+            const bId = getItemIdFromName(category, bName);
+
+            const aRarity = inv_data.items[category][aId].rarity;
+            const bRarity = inv_data.items[category][bId].rarity;
+
+            return order_by_rarity.indexOf(aRarity) - order_by_rarity.indexOf(bRarity);
+        });
+
+        item_containers.forEach(div => container.appendChild(div)); // Reattach in new order
+    });
 }
