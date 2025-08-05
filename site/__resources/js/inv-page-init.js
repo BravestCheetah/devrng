@@ -6,3 +6,5 @@ items.forEach(item => {
     console.log(`  - loading item "${item}"...`)
     addItem(item.split(".")[0], item.split(".")[1])
 });
+
+update_category_completion();

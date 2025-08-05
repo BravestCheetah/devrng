@@ -19,6 +19,7 @@ function addItem(category, item) {
     item_container.appendChild(item_text);
 
     sort_inv();
+    update_category_completion();
 }
 
 
@@ -105,9 +106,13 @@ function get_category_completion(category) {
 
 
 function update_category_completion() {
-    categories = Object.keys(inv_data.items);
+    const categories = Object.keys(inv_data.items);
 
     categories.forEach(category => {
-        category_container = inv_data.sections[category];
+        const category_container = inv_data.sections[category];
+        const category_text = category_container.parentNode.querySelector(".inv-section-title")
+
+        const category_name = category_text.textContent.split(" -")[0]
+        category_text.textContent = `${category_name} - ${get_category_completion(category)}`
     });
 }
