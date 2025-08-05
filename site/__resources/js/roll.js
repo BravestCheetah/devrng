@@ -30,8 +30,6 @@ async function animate_progress(progressEl, duration, max) {
 }
 
 
-
-
 async function roll_collection(collection_name) {
 
     const roll_overlay = document.getElementById("roll-overlay");
@@ -43,6 +41,7 @@ async function roll_collection(collection_name) {
     overlay_result.style.fontSize = "16px";
 
     roll_overlay.style.display = "block";
+    overlay_progress.classList.add("visible");
     roll_overlay.classList.remove("visible");
 
     requestAnimationFrame(() => {
@@ -89,6 +88,9 @@ async function roll_collection(collection_name) {
     }
 
     console.log(`Final Result: ${result}`);
+
+    overlay_progress.classList.remove("visible");
+
     if (!check_if_owned(result.split(".")[0], result.split(".")[1])) {
         addItem(result.split(".")[0], result.split(".")[1]);
         overlay_collection_name.textContent = "Added To Invetory!";
@@ -97,14 +99,14 @@ async function roll_collection(collection_name) {
         overlay_collection_name.textContent = "Already Owned";
     }
 
-    overlay_progress.style.display = "none";
-    overlay_result.style.fontSize = "32px";
-    overlay_result.style.fontSize = "26px";
+
+    overlay_result.style.fontSize = "24px";
 
     await sleep(1000);
 
     roll_overlay.classList.remove("visible");
-    await sleep(500);
+
+    await sleep(800);
     roll_overlay.style.display = "none";
 
 }
