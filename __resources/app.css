@@ -84,6 +84,7 @@ input[type='radio'] {
     padding: 4px;
     font-size: 12px;
     flex-shrink: 0;
+    text-align: inherit;
 }
 
 .inv-item img {

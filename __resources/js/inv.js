@@ -1,11 +1,12 @@
 // I am so sorry for this horrible code, its my first web dev project :sob:
 // oh yeah i like whitespace in variables / objects, so you know, thats why there are so many linebreaks
+// oh yeah also, yes the data and functions are in the same file, deal with it
 
 const inv = {
 
     sections: {
-        "os":document.getElementById("inv-os"),
-        "lang":document.getElementById("inv-lang"),
+        "os": document.querySelector("#inv-os .inv-item-section"),
+        "lang": document.querySelector("#inv-lang .inv-item-section"),
     },
 
 
@@ -24,7 +25,7 @@ const inv = {
             python: {
                 rarity: "rare",
                 name: "Python",
-                image: "arch-linux.png"
+                image: "python.png"
             }
         }
     }
@@ -41,7 +42,7 @@ function addItem(category, item) {
     container.appendChild(item_container);
 
     item_img = document.createElement("img");
-    item_img.src = `../__resources/images/rolls/${category}/${inv.items[category][item].image}`;
+    item_img.src = `../__resources/images/items/${category}/${inv.items[category][item].image}`;
     item_container.appendChild(item_img);
 
     item_text = document.createElement("p");
