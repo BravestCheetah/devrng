@@ -86,13 +86,13 @@ const inv_data = {
             win3: {
                 rarity: "rare",
                 name: "Windows 3.1",
-                image: "win3.png"
+                image: "win2.png" // you know the drill, its the same
             },
             
             winme: {
                 rarity: "uncommon",
                 name: "Windows ME",
-                image: "me.png"
+                image: "98.png" // Sorry, couldnt find one with the window frames / image frames / folders or whatev, its basically the same anyways
             },
 
             win2000: {
