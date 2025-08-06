@@ -81,7 +81,7 @@ async function roll_collection(collection_name) {
         magic_num = Math.random();
         chance_score = 0;
         
-        for (const [rarity, chance] of Object.entries(roll_data.rarities))  {
+        for (const [rarity, chance] of Object.entries(roll_data.rarities[collection_name]))  {
             chance_score += chance;
             if (magic_num <= chance_score) {
                 result = get_random_item_of_rarity(roll_data.collections[collection_name].items, rarity);

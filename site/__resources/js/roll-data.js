@@ -1,10 +1,13 @@
 const roll_data = {
 
     rarities: {
-        "uncommon": .6,
-        "rare": .3,
-        "legendary": .08,
-        "divine": .02,
+        languages: {
+            "uncommon": .75,
+            "rare": .2,
+            "legendary": .042,
+            "divine": .008,
+        },
+
     },
 
     collections: {
