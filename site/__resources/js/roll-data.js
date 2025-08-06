@@ -29,7 +29,7 @@ const roll_data = {
                 "lang.holyc",
                 "lang.lol",
                 "lang.asm",
-                "lang.haskel",
+                "lang.haskell",
                 "lang.kotlin",
                 "lang.lua",
                 "lang.luau",

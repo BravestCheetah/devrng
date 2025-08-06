@@ -87,7 +87,7 @@ async function roll_collection(collection_name) {
                 break
             }
         }
-        
+
         overlay_result.textContent = inv_data.items[result.split(".")[0]][result.split(".")[1]].name;
         overlay_rarity.textContent = inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity.toUpperCase();
         overlay_rarity.style.color = inv_data.rarities[inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity];
