@@ -50,7 +50,7 @@ const inv_data = {
             win8: {
                 rarity: "uncommon",
                 name: "Windows 8.1",
-                image: "win8.png"
+                image: "win10.png" // Theyre The same :sob:
             },
 
             win98: {
