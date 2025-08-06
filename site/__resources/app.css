@@ -80,8 +80,7 @@ input[type='radio'] {
     display: flex;
     flex-direction: row;
     column-gap: 25px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    flex-wrap: wrap;
     scrollbar-width: thin;
     scrollbar-color: #ff0000;
     text-align: center;
@@ -96,6 +95,7 @@ input[type='radio'] {
     font-size: 12px;
     flex-shrink: 0;
     text-align: inherit;
+    margin-bottom: 25px;
 }
 
 .roll-content {
