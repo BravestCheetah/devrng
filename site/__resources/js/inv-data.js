@@ -62,13 +62,13 @@ const inv_data = {
             winvista: {
                 rarity: "uncommon",
                 name: "Windows Vista",
-                image: "vista.png"
+                image: "win98.png" // theyre the same, microsoft, up your game lmao, put some effort into those logos
             },
 
             winxp: {
                 rarity: "rare",
                 name: "Windows XP",
-                image: "xp.png"
+                image: "win98.png" // its all the same
             },
 
             win1: {
