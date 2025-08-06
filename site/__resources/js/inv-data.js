@@ -24,7 +24,7 @@ const inv_data = {
             },
 
             win10: {
-                rarity: "rare",
+                rarity: "legendary",
                 name: "Windows 10",
                 image: "win10.png"
             },
