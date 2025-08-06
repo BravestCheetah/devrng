@@ -37,8 +37,8 @@ const inv_data = {
             
             ubuntu: {
                 rarity: "rare",
-                name: "Arch Linux",
-                image: "arch-linux.png"
+                name: "Ubuntu",
+                image: "ubuntu.png"
             },
 
             win7: {
