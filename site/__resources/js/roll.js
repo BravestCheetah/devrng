@@ -8,6 +8,18 @@ function easeOutCubic(t) {
 }
 
 
+function get_random_item_of_rarity(items, rarity) {
+    console.log(items)
+    while (true) {
+        const index = Math.floor(Math.random() * items.length);
+        const item = items[index];
+        if (inv_data.items[item.split(".")[0]][item.split(".")[1]].rarity == rarity) {
+            return item;
+        }
+    }
+}
+
+
 async function animate_progress(progressEl, duration, max) {
     const start = performance.now();
     
@@ -69,10 +81,10 @@ async function roll_collection(collection_name) {
         magic_num = Math.random();
         chance_score = 0;
         
-        for (const [item, chance] of Object.entries(roll_data.collections[collection_name].items))  {
+        for (const [rarity, chance] of Object.entries(roll_data.rarities))  {
             chance_score += chance;
             if (magic_num <= chance_score) {
-                result = item;
+                result = get_random_item_of_rarity(roll_data.collections[collection_name].items, rarity);
                 break
             }
         }

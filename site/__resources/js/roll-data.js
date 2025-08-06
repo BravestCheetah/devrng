@@ -1,28 +1,35 @@
 const roll_data = {
 
+    rarities: {
+        "uncommon": .6,
+        "rare": .3,
+        "legendary": .08,
+        "divine": .02,
+    },
+
     collections: {
         container: document.getElementById("roll-collections"),
 
         languages: {
             name: "programming Languages",
 
-            items: {
-                "lang.javascript": 0.1239669421,
-                "lang.cs": 0.1239669421,
-                "lang.cpp": 0.1239669421,
-                "lang.php": 0.1239669421,
-                "lang.go": 0.1239669421,
+            items: [
+                "lang.javascript",
+                "lang.cs",
+                "lang.cpp",
+                "lang.php",
+                "lang.go",
 
-                "lang.python": 0.0826446281,
-                "lang.clang": 0.0826446281,
-                "lang.rust": 0.0826446281,
-                "lang.java": 0.0826446281,
+                "lang.python",
+                "lang.clang",
+                "lang.rust",
+                "lang.java",
                 
-                "lang.holyc": 0.02066115702,
-                "lang.lol": 0.02066115702,
+                "lang.holyc",
+                "lang.lol",
 
-                "lang.asm": 0.00826446281,
-            }
+                "lang.asm"
+            ]
         }
 
     }
