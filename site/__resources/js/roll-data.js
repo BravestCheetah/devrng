@@ -22,16 +22,20 @@ const roll_data = {
                 "lang.cpp",
                 "lang.php",
                 "lang.go",
-
                 "lang.python",
                 "lang.clang",
                 "lang.rust",
                 "lang.java",
-                
                 "lang.holyc",
                 "lang.lol",
-
-                "lang.asm"
+                "lang.asm",
+                "lang.haskel",
+                "lang.kotlin",
+                "lang.lua",
+                "lang.luau",
+                "lang.mysql",
+                "lang.sql",
+                "lang.postgresql"
             ]
         }
 
