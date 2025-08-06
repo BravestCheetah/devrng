@@ -9,7 +9,6 @@ function easeOutCubic(t) {
 
 
 function get_random_item_of_rarity(items, rarity) {
-    console.log(items)
     while (true) {
         const index = Math.floor(Math.random() * items.length);
         const item = items[index];
@@ -88,8 +87,7 @@ async function roll_collection(collection_name) {
                 break
             }
         }
-
-        console.log(result);
+        
         overlay_result.textContent = inv_data.items[result.split(".")[0]][result.split(".")[1]].name;
         overlay_rarity.textContent = inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity.toUpperCase();
         overlay_rarity.style.color = inv_data.rarities[inv_data.items[result.split(".")[0]][result.split(".")[1]].rarity];
