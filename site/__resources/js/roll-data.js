@@ -16,27 +16,7 @@ const roll_data = {
         languages: {
             name: "programming Languages",
 
-            items: [
-                "lang.javascript",
-                "lang.cs",
-                "lang.cpp",
-                "lang.php",
-                "lang.go",
-                "lang.python",
-                "lang.clang",
-                "lang.rust",
-                "lang.java",
-                "lang.holyc",
-                "lang.lol",
-                "lang.asm",
-                "lang.haskell",
-                "lang.kotlin",
-                "lang.lua",
-                "lang.luau",
-                "lang.mysql",
-                "lang.sql",
-                "lang.postgresql"
-            ]
+            items: "lang"
         }
 
     }

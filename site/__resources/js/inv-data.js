@@ -18,10 +18,34 @@ const inv_data = {
 
         os: {
             arch: {
+                rarity: "legendary",
+                name: "Arch Linux",
+                image: "arch-linux.png"
+            },
+
+            win10: {
+                rarity: "rare",
+                name: "Windows 10",
+                image: "win10.png"
+            },
+
+            win11: {
+                rarity: "uncommon",
+                name: "Windows 11",
+                image: "win11.png"
+            },
+            
+            ubuntu: {
                 rarity: "rare",
                 name: "Arch Linux",
                 image: "arch-linux.png"
-            }
+            },
+
+            arch: {
+                rarity: "rare",
+                name: "Arch Linux",
+                image: "arch-linux.png"
+            },
         },
 
         lang: {
