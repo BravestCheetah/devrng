@@ -41,10 +41,88 @@ const inv_data = {
                 image: "arch-linux.png"
             },
 
-            arch: {
+            win7: {
+                rarity: "legendary",
+                name: "Windows 7",
+                image: "win7.png"
+            },
+
+            win8: {
+                rarity: "uncommon",
+                name: "Windows 8.1",
+                image: "win8.png"
+            },
+
+            win98: {
+                rarity: "uncommon",
+                name: "Windows 98",
+                image: "win98.png"
+            },
+            
+            winvista: {
+                rarity: "uncommon",
+                name: "Windows Vista",
+                image: "vista.png"
+            },
+
+            winxp: {
                 rarity: "rare",
-                name: "Arch Linux",
-                image: "arch-linux.png"
+                name: "Windows XP",
+                image: "xp.png"
+            },
+
+            win1: {
+                rarity: "rare",
+                name: "Windows 7",
+                image: "win1.png"
+            },
+
+            win2: {
+                rarity: "uncommon",
+                name: "Windows 10",
+                image: "win2.png"
+            },
+
+            win3: {
+                rarity: "rare",
+                name: "Windows 3.1",
+                image: "win3.png"
+            },
+            
+            winme: {
+                rarity: "uncommon",
+                name: "Windows ME",
+                image: "me.png"
+            },
+
+            win2000: {
+                rarity: "rare",
+                name: "Windows 2000",
+                image: "2000.png"
+            },
+
+            fedora: {
+                rarity: "rare",
+                name: "Fedora Linux",
+                image: "fedora.png"
+            },
+
+            mint: {
+                rarity: "uncommon",
+                name: "Linux Mint",
+                image: "mint.png"
+            },
+            
+            amogos: {
+                rarity: "legendary",
+                name: "AmogOS",
+                image: "amog.png"
+            },
+
+            mcc: {
+                rarity: "divine",
+                name: "MCC Interium Linux",
+                image: "mcc.png"
             },
         },
 
