@@ -96,6 +96,42 @@ const inv_data = {
                 name: "Assembly",
                 image: "asm.png"
             },
+
+            kotlin: {
+                rarity: "rare",
+                name: "Kotlin",
+                image: "kotlin.png"
+            },
+
+            lua: {
+                rarity: "uncommon",
+                name: "Lua",
+                image: "lua.png"
+            },
+
+            luau: {
+                rarity: "rare",
+                name: "Luau",
+                image: "luau.png"
+            },
+
+            haskell: {
+                rarity: "uncommon",
+                name: "Haskell",
+                image: "haskell.png"
+            },
+
+            mysql: {
+                rarity: "rare",
+                name: "MySQL",
+                image: "mysql.png"
+            },
+
+            postgresql: {
+                rarity: "rare",
+                name: "PostgreSQL",
+                image: "postgresql.png"
+            },
         }
     }
 
