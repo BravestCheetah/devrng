@@ -8,6 +8,12 @@ const roll_data = {
             "divine": .008,
         },
 
+        os: {
+            "uncommon": .75,
+            "rare": .2,
+            "legendary": .042,
+            "divine": .008,
+        },
     },
 
     collections: {
@@ -17,6 +23,12 @@ const roll_data = {
             name: "programming Languages",
 
             items: "lang"
+        },
+
+        os: {
+            name: "Operating Systems",
+
+            items: "os"
         }
 
     }
