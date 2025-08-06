@@ -132,6 +132,12 @@ const inv_data = {
                 name: "PostgreSQL",
                 image: "postgresql.png"
             },
+
+            sql: {
+                rarity: "legendary",
+                name: "SQL",
+                image: "sql.png"
+            },
         }
     }
 
