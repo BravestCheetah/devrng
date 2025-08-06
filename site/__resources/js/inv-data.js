@@ -122,7 +122,7 @@ const inv_data = {
             mcc: {
                 rarity: "divine",
                 name: "MCC Interium Linux",
-                image: "mcc.png"
+                image: "linux.png"
             },
         },
 
