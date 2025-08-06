@@ -89,6 +89,18 @@ function sort_inv() {
 }
 
 
+// if i get enough energy ill use this in a feature some day
+function get_amount_of_a_rarity(category, rarity) {
+    let counter = 0;
+    for (const item of Object.keys(inv_data.items[category])) {
+        if (inv_data.items[category][item].rarity == rarity) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+
 function get_category_completion(category) {
     const data = load_stored_data();
     var owned_item_count = 0;
